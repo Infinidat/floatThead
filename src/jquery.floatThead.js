@@ -585,7 +585,7 @@
         if(headerFloated){
           headerFloated = false;
           if(useAbsolutePositioning){ //#53, #56
-            $table.width(originalTableWidth);
+//            $table.width(originalTableWidth);
           }
           $newHeader.detach();
           $table.prepend($header);
@@ -989,7 +989,7 @@
 
       $window.on(eventName('load'), reflowEvent); //for tables with images
 
-      windowResize(eventName('resize'), windowResizeEvent);
+//      windowResize(eventName('resize'), windowResizeEvent);
       $table.on('reflow', reflowEvent);
       if(opts.support && opts.support.datatables && isDatatable($table)){
         $table
