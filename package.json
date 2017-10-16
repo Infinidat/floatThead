@@ -8,7 +8,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "uglifyjs": "2.7.5"
+    "uglify-js": "2.7.5"
   },
   "repository": {
     "type": "git",

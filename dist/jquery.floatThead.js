@@ -499,7 +499,7 @@
         var width = $container.width() || tw;
         var floatContainerWidth = $container.css("overflow-y") != 'hidden' ? width - scrollbarOffset.vertical : width;
         $floatContainer.width(floatContainerWidth);
-        if(locked){
+        if(false && locked){
           var percent = 100 * tw / (floatContainerWidth);
           $floatTable.css('width', percent+'%');
         } else {
@@ -585,7 +585,7 @@
         if(headerFloated){
           headerFloated = false;
           if(useAbsolutePositioning){ //#53, #56
-            $table.width(originalTableWidth);
+//            $table.width(originalTableWidth);
           }
           $newHeader.detach();
           $table.prepend($header);
@@ -989,7 +989,7 @@
 
       $window.on(eventName('load'), reflowEvent); //for tables with images
 
-      windowResize(eventName('resize'), windowResizeEvent);
+//      windowResize(eventName('resize'), windowResizeEvent);
       $table.on('reflow', reflowEvent);
       if(opts.support && opts.support.datatables && isDatatable($table)){
         $table
