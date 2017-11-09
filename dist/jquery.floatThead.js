@@ -462,7 +462,7 @@
                             marginTop: 0,
                             top:  useAbsolutePositioning ? 0 : 'auto',
                             zIndex: opts.zIndex,
-                            willChange: 'transform'
+                            // willChange: 'transform'
                           });
       $floatContainer.addClass(opts.floatContainerClass);
       updateScrollingOffsets();
@@ -835,23 +835,23 @@
         var oldScrollLeft = null;
         return function(pos, setWidth, setHeight){
           if(pos != null && (oldTop != pos.top || oldLeft != pos.left)){
-            if(ieVersion === 8){
-              $floatContainer.css({
-                top: pos.top,
-                left: pos.left
-              });
-            } else {
-              var transform = 'translateX(' + pos.left + 'px) translateY(' + pos.top + 'px)';
-              $floatContainer.css({
-                '-webkit-transform' : transform,
-                '-moz-transform'    : transform,
-                '-ms-transform'     : transform,
-                '-o-transform'      : transform,
-                'transform'         : transform,
-                'top': 0,
-                'left': 0
-              });
-            }
+            // if(ieVersion === 8) {
+            $floatContainer.css({
+              top: pos.top,
+              left: pos.left
+            });
+            // } else {
+            //   var transform = 'translateX(' + pos.left + 'px) translateY(' + pos.top + 'px)';
+            //   $floatContainer.css({
+            //     '-webkit-transform' : transform,
+            //     '-moz-transform'    : transform,
+            //     '-ms-transform'     : transform,
+            //     '-o-transform'      : transform,
+            //     'transform'         : transform,
+            //     'top': 0,
+            //     'left': 0
+            //   });
+            // }
             oldTop = pos.top;
             oldLeft = pos.left;
           }
