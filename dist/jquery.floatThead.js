@@ -835,7 +835,7 @@
         var oldScrollLeft = null;
         return function(pos, setWidth, setHeight){
           if(pos != null && (oldTop != pos.top || oldLeft != pos.left)){
-            // if(ieVersion === 8) {
+            // if(ieVersion === 8){
             $floatContainer.css({
               top: pos.top,
               left: pos.left
