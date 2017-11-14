@@ -567,13 +567,13 @@
       function refloat(){ //make the thing float
         if(!headerFloated){
           headerFloated = true;
-          if(useAbsolutePositioning){ //#53, #56
-            var tw = tableWidth($table, $fthCells, true);
-            var wrapperWidth = $wrapper.width();
-            if(tw > wrapperWidth){
-              $table.css('minWidth', tw);
-            }
-          }
+//          if(useAbsolutePositioning){ //#53, #56
+//            var tw = tableWidth($table, $fthCells, true);
+//            var wrapperWidth = $wrapper.width();
+//            if(tw > wrapperWidth){
+//              $table.css('minWidth', tw);
+//            }
+//          }
           $table.css(layoutFixed);
           $floatTable.css(layoutFixed);
           $floatTable.append($header); //append because colgroup must go first in chrome
@@ -592,7 +592,7 @@
           $table.css(layoutAuto);
           $floatTable.css(layoutAuto);
           $table.css('minWidth', originalTableMinWidth); //this looks weird, but it's not a bug. Think about it!!
-          $table.css('minWidth', tableWidth($table, $fthCells)); //#121
+//          $table.css('minWidth', tableWidth($table, $fthCells)); //#121
         }
       }
       var isHeaderFloatingLogical = false; //for the purpose of this event, the header is/isnt floating, even though the element
